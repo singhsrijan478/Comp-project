@@ -1,0 +1,55 @@
+print('--------------WELCOME TO LIBRARY-------------')
+print('Select user interface- student(1) or admin(2)')
+q=int(input())
+if q==1:
+    #student
+    print('WELCOME\nAvailable Options\n1)Login2)Show status\n3)Show all Books\n4)Show available Books\n5)Search by Category')
+    w='y'
+    while w=='y'or w=='Y':
+        opt=int(input('Enter option'))
+        if opt==1:
+            login()
+        elif opt==2:
+            status()
+        elif opt==3:
+            showall()
+        elif opt==4:
+            showav()
+        elif opt ==5:
+            search()
+        else:
+            print('enter an option from above choices')
+        print('Wish to Continue?(y/n)')
+        w=input()
+elif q==2:
+    #admin
+    pwd = int(input('enter password'))
+    while pwd == 1234:
+        break
+    else:
+        print('wrong password')
+        pwd=int(input('enter password'))
+    print('WELCOME\nchoose an option\n1)Add book\n2)Modify book\n3)book info\n4)Show all books\n5)Search by category\n6)Book issued\n7)Calculate late fine\n8)Delete book')
+    a='y'
+    while a=='y'or a=='Y':
+        opt=int(input())
+        if opt==1:
+            add()
+        elif opt==2:
+            modify()
+        elif opt==3:
+            info()
+        elif opt==4:
+            showall()
+        elif opt==5:
+            search()
+        elif opt==6:
+            issued()
+        elif opt==7:
+            fine()
+        elif opt==8:
+            delete()
+        else:
+            print('choose an option from the ones given above')
+    print('Wish to continue?(y/n)')
+    a=input()
